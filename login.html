@@ -58,7 +58,7 @@
       abaixo</h1>
     <div class="teladelogin">
       <h1>Login</h1>
-      <input type="text" placeholder="Email">
+      <input type="text" id="emailformulario" placeholder="Email">
       <br><br>
       <input type="password" placeholder="Senha">
       <br><br>
@@ -68,11 +68,33 @@
 </body>
 
 <script>
+
+
+  function EmailEstaPreenchido(){
+      //Fazer de fato a validação!
+      var campoemail =  document.getElementById("emailformulario");
+      if(campoemail.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+  }
+
+
  
   function Redirecionar(){
-    
-     window.location.href = "dashboard.html";
+    var retorno = EmailEstaPreenchido();
+ 
+    if(retorno == true){
+       window.location.href = "dashboard.html";
+    }
+    else{
+        alert("Email deve ser preenchido");
+    }
   }
+
   function Senha(){
     window.location.href = "EsqueciMinhaSenha.html"
   }
