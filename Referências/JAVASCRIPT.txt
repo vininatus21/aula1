@@ -1,0 +1,5 @@
+Criando Funcões:
+https://www.w3schools.com/js/js_function_definition.asp
+
+Eventos do Javascript:
+https://www.w3schools.com/jsref/dom_obj_event.asp
