@@ -47,6 +47,10 @@
       
         font-family: Arial, Helvetica, sans-serif;
       }
+        .esqueciminhasenha{
+         color: white;
+
+        }
     </style>
 </head>
 <body>
@@ -59,7 +63,7 @@
       <input type="password" placeholder="Senha">
       <br><br>
       <button type="button" onclick="Redirecionar()" >Enviar</button>
-      
+      <a href="#" class="esqueciminhasenha" onclick="Senha()" >Esqueci minha Senha</a>
     </div>
 </body>
 
@@ -69,6 +73,10 @@
     
      window.location.href = "dashboard.html";
   }
+  function Senha(){
+    window.location.href = "EsqueciMinhaSenha.html"
+  }
+
 
 </script>
 
