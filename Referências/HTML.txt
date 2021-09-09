@@ -1,0 +1,14 @@
+
+ESTRUTURA BASICA DE UM HTML:
+https://www.w3schools.com/html/html_basic.asp
+
+
+TAGS NO HTML
+https://www.w3schools.com/tags/default.asp
+
+ATRIBUTOS NO HTML
+https://www.w3schools.com/html/html_attributes.asp
+https://www.w3schools.com/tags/ref_attributes.asp
+
+FORMULARIO HTML:
+https://www.w3schools.com/html/html_forms.asp

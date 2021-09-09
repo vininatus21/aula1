@@ -1,0 +1,33 @@
+ESTRUTURA,
+
+•	Na tela de Login, criar um botão "Cadastrar Aluno".
+•	Criar Uma nova Tela de CadastroAluno
+
+HISTÓRIA DE USUÁRIO
+
+•	Como estudante do curso “Curso de TI”
+•	Quero poder me cadastrar no sistema 
+•	Para que eu possa acessar meu conteúdo das aulas.
+
+
+COMPORTAMENTO:
+
+1) Na tela de Login, criar um link "Cadastrar Aluno".
+2) Ao clicar no link o usuário deverá ser redirecionado para uma nova página denominada: "CadastrarAluno.html"
+3) Na tela "CadastrarAluno.html" deverá ter um formulário com os seguintes campos:
+    •	Label(Escrito) : "Nome:" e um campo de preenchimento.
+    •	Label(Escrito) : "Email:" e um campo de preenchimento.
+    •	Label(Escrito) : "Senha:" e um campo de preenchimento.
+    •	Label(Escrito) : "Telefone:" e um campo de preenchimento.
+    •	Label(Escrito) : "CPF:" e um campo de preenchimento.
+    •	Label(Escrito) : "CEP:" e um campo de preenchimento.
+    •	Label(Escrito) : "Endereço:" e um campo de preenchimento.
+    •	Label(Escrito) : "Numero:" e um campo de preenchimento.
+    •	Um Botão "Enviar".
+    	Um Botão "Cancelar".
+
+4) Ao clicar no botão Enviar, criar uma alerta com a seguinte mensagem: "Pendente: Cadastrar usuário no banco de dados". Após o alerta, redirecionar o usuário para a tela de login
+5) Ao clicar no botão Cancelar, redirecionar usuário para a lágina de Login.
+
+ENTREGA:
+Commitar todos os arquivos no Git.
