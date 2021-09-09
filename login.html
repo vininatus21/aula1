@@ -60,15 +60,23 @@
       <h1>Login</h1>
       <input type="text" id="emailformulario" placeholder="Email">
       <br><br>
-      <input type="password" placeholder="Senha">
+      <input type="password" id="senhapas"placeholder="Senha" > 
       <br><br>
       <button type="button" onclick="Redirecionar()" >Enviar</button>
       <a href="#" class="esqueciminhasenha" onclick="Senha()" >Esqueci minha Senha</a>
     </div>
 </body>
-
 <script>
-
+  function SenhaEstaPreenchida(){
+     var campopassword =  document.getElementById("senhapas");
+      if(campopassword.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+      }
 
   function EmailEstaPreenchido(){
       //Fazer de fato a validação!
@@ -81,26 +89,20 @@
          return false;
       }
   }
-
-
- 
   function Redirecionar(){
-    var retorno = EmailEstaPreenchido();
- 
-    if(retorno == true){
+    //agora tá debugando.
+    
+    var retornoemail = EmailEstaPreenchido();
+    var retornosenha = SenhaEstaPreenchida();
+    if(retornoemail == true && retornosenha == true ){
        window.location.href = "dashboard.html";
     }
     else{
-        alert("Email deve ser preenchido");
+        alert("Email e senha devem ser preenchidos");
     }
   }
-
   function Senha(){
     window.location.href = "EsqueciMinhaSenha.html"
   }
-
-
 </script>
-
-
 </html>
