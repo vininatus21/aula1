@@ -1,9 +1,7 @@
 ESTRUTURA,
 
 •	Na tela de Login, criar um botão "Esqueci minha Senha".
-
-Criar 1 tela de “Meus cursos”
-•	Um Alerta de Boas Vindas
+•	Criar Uma nova Tela de EsqueciMinhaSenha
 
 HISTÓRIA DE USUÁRIO
 
