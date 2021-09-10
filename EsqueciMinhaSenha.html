@@ -13,16 +13,32 @@ body{
 </head>
 <body>
     <h2>Crie sua senha nova</h2>
-    <input type="text" placeholder="Email"> <br>
-    <button type="button" onclick="Alerta()">Enviar</button>
+    <input type="text" placeholder="Email" id="email"> <br>
+    <button type="button" onclick="Alerta()"> Enviar </button>
     
 
 </body>
 <script>
 function Alerta(){
-    window.alert( `Senha Enviada com Sucesso `) 
-    window.location.href = "login.html"
-}
+    var campoemail = emailpreenchido();
+    if(campoemail == true ){
+    window.location.href = "login.html" 
+    window.alert( `Senha Enviada com Sucesso `)}
+    
+    else{
+        alert("Email deve ser preenchidos");
+    }
 
+    }
+function emailpreenchido(){
+    var campoemail =  document.getElementById("email");
+      if(campoemail.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+  }
 </script>
 </html>

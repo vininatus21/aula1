@@ -14,8 +14,8 @@
         {
             "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open login.html",
-            "file": "C:\\Users\\rodri\\Documents\\GitHub\\aula1"
+            "name": "Abrir debug",
+            "file": "C:\\Users\\vinin\\OneDrive\\Área de Trabalho\\Git\\aula1\\CadastrarAluno.html"
         }
     ]
 }

@@ -36,8 +36,8 @@
         <input type="text" name="endereco" id="endereco">
     </div>
     <div>
-        <label for="">Telefone</label>
-        <input type="tel" name="telefone" id="telefone">
+        <label for="">Numero</label>
+        <input type="tel" name="numero" id="numero">
     </div>
     <div>
         <button type="button" onclick="Enviarformulario()">Enviar</button>
@@ -51,9 +51,16 @@
 <script>
 function Enviarformulario(){
     var camponome = camponomeP();
-    var retornoemail = emailpreenchido();
+    var campoemail = emailpreenchido();
+    var camposenha = camposenhaP();
+    var campotelefone = campotelefoneP();
+    var campocpf = campocpfP();
+    var campocep = campocepP();
+    var campoendereco = campoenderecoP();
+    var camponumero = camponumeroP();
 
-    if (retornoemail == true && camponome == true)
+    if (campoemail == true && camponome == true && camposenha == true && campotelefone == true &&
+        campocpf == true && campocep == true && campoendereco == true && camponumero == true)
     {
      window.location.href = "login.html"
      window.alert('Pendente: Cadastrar usuário no banco de dados')}
@@ -62,13 +69,6 @@ function Enviarformulario(){
     }
 
 }
-
-
-
-
-
-
-
 function VoltarLogin(){
    window.location.href = "login.html"
 
@@ -95,21 +95,68 @@ function camponomeP(){
          return false;
       }
   }
+function camposenhaP(){
+    var camposenha =  document.getElementById("senha");
+    if(camposenha.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+  }
+     function campotelefoneP(){
+    var campotelefone =  document.getElementById("telefone");
+    if(campotelefone.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
 
+ }
+   function campocpfP(){
+    var campocpf =  document.getElementById("cpf");
+    if(campocpf.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+   }
+  function campocepP(){
+    var campocep =  document.getElementById("cep");
+    if(campocep.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+  }
+  function campoenderecoP(){
+    var campoendereco =  document.getElementById("endereco");
+    if(campoendereco.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function camponumeroP(){
+    var camponumero =  document.getElementById("numero");
+    if(camponumero.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+    }
 </script>
 
 </html>
