@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Aluno</title>
+</head>
+<body>
+   <div>
+        <label>Nome</label>  
+        <input type="text" name="Nome">
+</div> 
+<div>
+        <label >Email</label>
+        <input type="email" name="email" id="email">
+</div> 
+    <div>
+         <label >Senha</label>
+         <input type="password" name="senha" id="senha">
+    </div>
+    <div>
+        <label>Telefone</label>
+        <input type="tel" name="telefone" id="telefone">
+    </div>
+    <div>
+        <label>Cpf</label>
+        <input type="tel" name="cpf" id="cpf">
+    </div>
+    <div>
+        <label >Cep</label>
+        <input type="tel" name="cep" id="cep">
+    </div>
+    <div>
+        <label >Endereço</label>
+        <input type="text" name="endereco" id="endereco">
+    </div>
+    <div>
+        <label for="">Telefone</label>
+        <input type="tel" name="telefone" id="telefone">
+    </div>
+    <div>
+        <button type="button" onclick="Enviarformulario()">Enviar</button>
+    </div>
+    <div>
+        <button type="button" onclick="VoltarLogin()">Voltar</button>
+
+    </div>
+    
+</body>
+<script>
+function Enviarformulario(){
+    window.location.href = "login.html"
+    window.alert('Pendente: Cadastrar usuário no banco de dados')
+}
+function VoltarLogin(){
+   window.location.href = "login.html"
+
+}
+
+</script>
+</html>
