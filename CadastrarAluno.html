@@ -9,7 +9,7 @@
 <body>
    <div>
         <label>Nome</label>  
-        <input type="text" name="Nome">
+        <input type="text" name="Nome" id="nome">
 </div> 
 <div>
         <label >Email</label>
@@ -50,13 +50,66 @@
 </body>
 <script>
 function Enviarformulario(){
-    window.location.href = "login.html"
-    window.alert('Pendente: Cadastrar usuário no banco de dados')
+    var camponome = camponomeP();
+    var retornoemail = emailpreenchido();
+
+    if (retornoemail == true && camponome == true)
+    {
+     window.location.href = "login.html"
+     window.alert('Pendente: Cadastrar usuário no banco de dados')}
+     else{
+        alert("Campos devem ser Preenchidos!!!!");
+    }
+
 }
+
+
+
+
+
+
+
 function VoltarLogin(){
    window.location.href = "login.html"
 
 }
 
+function emailpreenchido(){
+    var campoemail =  document.getElementById("email");
+      if(campoemail.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+  }
+
+function camponomeP(){
+    var camponome =  document.getElementById("nome");
+      if(camponome.value)
+      {
+         return true;
+      }
+      else{
+         return false;
+      }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
+
 </html>
