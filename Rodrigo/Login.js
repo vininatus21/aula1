@@ -1,22 +1,27 @@
-
-
-function FocarNoEmail(){
-    document.getElementById("emailformulario").focus();
-}
-function FocarNaSenha(){
-    document.getElementById("senhapas").focus();
-}
-function SenhaEstaPreenchida() {
-    return document.getElementById("senhapas").value
-}
-function EmailEstaPreenchido() {
-    return document.getElementById("emailformulario").value
-}
 function Redirecionar() {
     if (CamposDePreenchimentoValidos()) {
         alert("Tudo ok, deveria redirecionar!")
     }
 }
+//funcao sem retorno
+function FocarNoEmail(){
+    document.getElementById("emailformulario").focus();
+}
+//funcao sem retorno
+function FocarNaSenha(){
+    document.getElementById("senhapas").focus();
+}
+//funcao com retorno do tipo boolean(true ou false)
+function SenhaEstaPreenchida() {
+    var resultadoSenha =  document.getElementById("senhapas").value.length > 0;
+    return resultadoSenha;
+}
+//funcao com retorno do tipo boolean(true ou false)
+function EmailEstaPreenchido() {
+    var resultadoemail = document.getElementById("emailformulario").value.length > 0;
+    return resultadoemail;
+}
+//funcao com retorno do tipo boolean(true ou false) 
 function CamposDePreenchimentoValidos(){
     var emailPreenchido = EmailEstaPreenchido();
     var senhaPreenchida = SenhaEstaPreenchida();
