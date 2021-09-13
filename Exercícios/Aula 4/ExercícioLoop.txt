@@ -1,0 +1,33 @@
+
+
+ESTRUTURA,
+
+•	Nova função na página Calculadora do Aluno
+
+HISTÓRIA DE USUÁRIO
+
+•	Como estudante do curso “Curso de TI”
+•	Quero poder descobris quais são os número pares de 0 a 10
+•	Para que eu possa melhorar na matéria
+
+
+COMPORTAMENTO:
+
+1) Na tela "CalculadoraAluno.html" criar um botão
+    •	"Numeros Pares de 0 a 10". 
+    Ao clicar nesse botão deverá chamar uma função que verifique todos os números pares de 0 a 10.
+    Durante a execução exibir um alerta em todos os números pares de 0 a 10.
+    Obs: Para isso, na função criada deve ser usado um laço de repetição (for).
+    Nesse laço deve ser feito uma verificação de condição(if) se o numero atual é par.
+    Caso for par, exibir um alerta: "? é par". No caso, ao invés do interrogação, deverá ter o número em questão.
+
+    Por fim, ao clicar no botão a saída deve ser a seguinte para o usuário:
+    "2 é par"
+    "4 é par"
+    "6 é par"
+    "8 é par"
+    "10 é par"
+
+
+ENTREGA:
+Commitar todos os arquivos no Git.
