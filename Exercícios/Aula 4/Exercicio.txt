@@ -1,0 +1,23 @@
+
+•	Na tela de Login, criar um botão "Esqueci minha Senha".
+•	Criar Uma nova Tela de EsqueciMinhaSenha
+
+HISTÓRIA DE USUÁRIO
+
+
+•	Como estudante do curso “Curso de TI”
+•	Quero poder recuperar minha senha
+•	Para que eu possa acessar o sistema
+
+
+COMPORTAMENTO:
+
+1) Na tela de Login, criar um link "Esqueci minha Senha".
+2) Ao clicar no link o usuário deverá ser redirecionado para uma nova página denominada: "EsqueciMinhaSenha.html"
+3) Na tela "EsqueciMinhaSenha.html" deverá ter um campo de email para o usuário colocar ser email.
+4) Na tela "EsqueciMinhaSenha.html" deverá ter um botão "Enviar"
+5) Ao criar no Botão "Enviar", emitir um alerta: "Senha Enviada com Sucesso".
+6) Após o Alerta de "Senha Enviada com Sucesso", o usuário deve ser redirecionado para a página de "Login.html".
+ENTREGA:
+
+Commitar todos os arquivos no Git.
