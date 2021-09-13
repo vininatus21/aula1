@@ -1,23 +1,33 @@
 
-•	Na tela de Login, criar um botão "Esqueci minha Senha".
-•	Criar Uma nova Tela de EsqueciMinhaSenha
+
+ESTRUTURA,
+
+•	Criação de uma nova página Calculadora do Aluno
 
 HISTÓRIA DE USUÁRIO
 
-
 •	Como estudante do curso “Curso de TI”
-•	Quero poder recuperar minha senha
-•	Para que eu possa acessar o sistema
+•	Quero poder calcular minha média no semestre
+•	Para que eu possa verificar se passei no semestre
 
 
 COMPORTAMENTO:
 
-1) Na tela de Login, criar um link "Esqueci minha Senha".
-2) Ao clicar no link o usuário deverá ser redirecionado para uma nova página denominada: "EsqueciMinhaSenha.html"
-3) Na tela "EsqueciMinhaSenha.html" deverá ter um campo de email para o usuário colocar ser email.
-4) Na tela "EsqueciMinhaSenha.html" deverá ter um botão "Enviar"
-5) Ao criar no Botão "Enviar", emitir um alerta: "Senha Enviada com Sucesso".
-6) Após o Alerta de "Senha Enviada com Sucesso", o usuário deve ser redirecionado para a página de "Login.html".
-ENTREGA:
+1) Na tela de DashBoard, criar um novo link: "Acessar calculadora do aluno"
+2) Ao clicar no link o usuário deverá ser redirecionado para uma nova página denominada: "CalculadoraAluno.html"
+3) Na tela "CalculadoraAluno.html" deverá ter um formulário com os seguintes campos:
+    •	Label(Escrito) : "Nota Grau A:" e um campo de preenchimento.
+    •	Label(Escrito) : "Nota Grau B:" e um campo de preenchimento.
+      •	Label(Escrito) : "Nota Grau C:" e um campo de preenchimento.
+    •	Um Botão "Calcular".
+    	Um Botão "Voltar".
 
+ATENÇÃO! Os campos de preenchimento só aceitarão número!!
+
+4) Ao clicar no botão Calcular, criar uma funcao que retornará a média das tuas notas.
+    Obs: Nota Grau A tem 
+5) Ao clicar no botão Voltar, redirecionar usuário para a página Dashboard.
+
+ENTREGA:
 Commitar todos os arquivos no Git.
+ESTRUTURA,
