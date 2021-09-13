@@ -5,8 +5,8 @@ ESTRUTURA,
 HISTÓRIA DE USUÁRIO
 
 •	Como estudante do curso “Curso de TI”
-•	Quero poder calcular minha média  semestre
-•	Para que eu possa verificar minha situação 
+•	Quero poder calcular minha média no semestre
+•	Para que eu possa verificar se passei no semestre
 
 
 COMPORTAMENTO:
