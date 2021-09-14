@@ -1,0 +1,25 @@
+
+
+ESTRUTURA,
+
+•	Nova funções na página Calculadora do Aluno
+
+HISTÓRIA DE USUÁRIO
+
+•	Como estudante do curso “Curso de TI”
+•	Quero poder realizar algumas funções matemáticas
+•	Para que eu possa melhorar na matéria
+
+
+COMPORTAMENTO:
+
+1) Na tela "CalculadoraAluno.html" adicionar os seguintes botões
+    •	"BuscaData": Ao clicar deve exibir uma alerta com a Data Atual
+    •	"BuscaMes": Ao clicar deve exibir o mes atual. 
+   
+    
+
+ATENÇÃO! Os campos de preenchimento só aceitarão número!!
+
+ENTREGA:
+Commitar todos os arquivos no Git.

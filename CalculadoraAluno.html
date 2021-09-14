@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcule suas notas </title>
 </head>
+
 <body>
     <h1>Calcule suas notas aqui </h1>
     <div>
@@ -21,26 +23,27 @@
         <input type="number" name="notaC" id="NotaC">
     </div>
     <div>
-<button type="button" onclick="Calcular()" class="calcular" >Calcular
-</button>
+        <button type="button" onclick="Calcular()" class="calcular">Calcular
+            </button>
     </div>
     <div>
         <button type="button" onclick="Voltar()" class="voltar">Voltar</button>
     </div>
     <div>
-        <button type="button" onclick="AlertaPI()" class="PI">Calcule o PI  </button>
+        <button type="button" onclick="AlertaPI()" class="PI">Calcule o PI
+            </button>
     </div>
-    <div> 
-        <button type="button" onclick="AlertaNumero()" class="Randon">Numero Aleatorio   </button>
+    <div>
+        <button type="button" onclick="AlertaNumero()" class="Randon">Numero
+                Aleatorio </button>
     </div>
-    <div> 
-        <button type="button" onclick="VerificaSeNumeroAleatorioEhMaiorQue5()">Verifica Numero Aleatorio </button>
+    <div>
+        <button type="button" onclick="VerificaSeNumeroAleatorioEhMaiorQue5()">Verifica Numero
+                Aleatorio </button>
     </div>
 </body>
 <script>
-
-
-
+ 
 function AlertaPI(){
     var pi = BuscaPI();
     alert(pi);
@@ -127,9 +130,38 @@ function Calcular()
 
   }
 
+    function notac() {
+        var campoc = document.getElementById("NotaC")
+        return campoc.value;
+
+    }
+
+    function Voltar() {
+        window.location.href = "dashboard.html"
+    }
 
 
+    function AlertaNumero() {
+        var retornoNumero = BuscaNumeroAleatorio();
+        alert(retornoNumero);
+        var a = "!";
+    }
 
+    function BuscaNumeroAleatorio() {
+        return Math.random() * 10;
+    }
 
+    function VerificaSeNumeroAleatorioEhMaiorQue5() {
+        alert("fazer o resto");
+        //buscar o numero aleatório
+
+        //verificar se é maior que 5
+
+        // se for(if), alert "maior"
+
+        // se não for, alert menor.
+
+    }
 </script>
+
 </html>
