@@ -1,3 +1,6 @@
+REQUISITO: Saber Loops e Condicionais:
+    Condicional: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals
+    Loops: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code
 
 
 ESTRUTURA,
