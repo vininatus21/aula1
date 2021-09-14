@@ -12,46 +12,138 @@
     <h1>Calcule suas notas aqui </h1>
     <div>
         <label>Nota Grau A:</label>
-        <input type="number" name="notaA" id="NotaA">
+        <input type="number" onclick="notaa()" name="notaA" id="NotaA">
     </div>
     <div>
         <label>Nota Grau B:</label>
-        <input type="number" name="notaB" id="NotaB">
+        <input type="number" onclick="notab()" name="notaB" id="NotaB">
     </div>
     <div>
         <label>Nota Grau C:</label>
-        <input type="number" name="notaC" id="NotaC">
+        <input type="number" onclick="notac()" name="notaC" id="NotaC">
     </div>
     <div>
-        <button type="button" class="calcular">Calcular
+        <button type="button" onclick="calcular()" class="calcular">Calcular
             </button>
     </div>
     <div>
-        <button type="button" class="voltar">Voltar</button>
+        <button type="button" onclick="voltar()" class="voltar">Voltar</button>
     </div>
     <div>
-        <button type="button" class="PI">Calcule o PI
+        <button type="button" onclick="pi()" class="PI">Calcule o PI
             </button>
     </div>
     <div>
-        <button type="button" class="Randon">Numero
+        <button type="button" onclick="aleatorio()" class="Randon">Numero
                 Aleatorio </button>
     </div>
     <div>
-        <button type="button">Verifica Numero
- Aleatorio </button>
+        <button type="button" onclick="verificacaoaleatorioehmaiorque5()">Verifica NumeroAleatorio </button>
     </div>
     <div>
-        <button type="button" class="Dataatual">Data Atual </button>
+        <button type="button" onclick="dataatual()" class="Dataatual">Data Atual </button>
     </div>
     <div>
-        <button type="button" class="Mesatual">Mês Atual </button>
+        <button type="button" onclick="mesatual()" class="Mesatual">Mês Atual </button>
     </div>
     <div>
-        <button type="button" class="par">Verificar Par  </button>
+        <button type="button" onclick="verificapar()" class="par">Verificar Par  </button>
     </div>
+
 </body>
 <script>
+    function notaa() {
+        var notagraua = document.getElementById("NotaA")
+        return notagraua.value;
+    }
+
+    function notab() {
+        var notagraub = document.getElementById("NotaB")
+        return notagraub.value
+    }
+
+    function notac() {
+        var notagrauc = document.getElementById("NotaC")
+        return notagrauc.value
+    }
+
+    function calcular() {
+        var notagraua = notaa();
+        var notagraub = notab();
+        var notagrauc = notac();
+        var media = (parseInt(notagraua) + parseInt(notagraub) + parseInt(notagrauc)) / 3;
+        if (media > 6) {
+            alert("Passou:" + media)
+        } else {
+            alert("reprovou:" + media)
+        }
+
+    }
+
+    function voltar() {
+        window.location.href = "dashboard.html"
+    }
+
+    function buscarpi() {
+        return Math.PI;
+    }
+
+    function pi() {
+        var pi = buscarpi();
+        alert(pi);
+    }
+
+    function aleatorio() {
+        var retornarnumero = BuscaNumeroAleatorio();
+        alert(retornarnumero);
+    }
+
+    function BuscaNumeroAleatorio() {
+        return Math.random() * 10;
+    }
+
+
+    function verificacaoaleatorioehmaiorque5() {
+        var verificacadecampoomaiorque5 = BuscaNumeroAleatorio();
+
+        if (verificacadecampoomaiorque5 >= 5) {
+            alert("Maior que 5:" + verificacadecampoomaiorque5)
+        } else {
+            alert("Menor que 5:" + verificacadecampoomaiorque5)
+        }
+    }
+
+    function buscardataatual() {
+        var data = new Date();
+        var dia = String(data.getDate()).padStart(2, '0');
+        dataAtual = dia
+    }
+
+    function dataatual() {
+        var data = buscardataatual();
+        alert(dataAtual);
+    }
+
+    function buscarmesatual() {
+        var data = new Date();
+        var mes = String(data.getMonth() + 1).padStart(2, '0');
+        MesAtual = mes
+
+    }
+
+    function mesatual() {
+        var mes = buscarmesatual();
+        alert(MesAtual)
+    }
+
+    function verificapar() {
+        for (var i = 0; i < 10; i++);
+        if (int_nun % 2 == 0) {
+            alert("Par")
+        } else {
+            alert("Inpar")
+        }
+    }
 </script>
 
 </html>
