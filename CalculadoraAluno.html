@@ -27,11 +27,42 @@
     </div>
 </body>
 <script>
-function Voltar(){
-    window.location.href = "dashboard.html"}
-function Calcular(){
-  
-}
 
+function Calcular()
+{
+   var notagraua = notaa();
+   var notagraub = notab();
+   var notagrauc = notac();
+   var media = (parseInt(notagraua) + parseInt(notagraub) + parseInt(notagrauc))/3;
+   if (media > 6) 
+   {
+        alert("Passou:" + media)
+   } 
+   else 
+   {
+        alert("Reprovou")
+   }
+}   
+    function notaa()
+{
+       var notagraua = document.getElementById("NotaA");
+      return notagraua.value;
+}
+    
+  function notab()
+  {
+       var campob = document.getElementById("NotaB")
+       return  campob.value;
+ }
+  
+  function notac()
+  {
+      var campoc = document.getElementById("NotaC")
+      return campoc.value;
+
+  }
+
+  function Voltar(){
+    window.location.href = "dashboard.html"}
 </script>
 </html>

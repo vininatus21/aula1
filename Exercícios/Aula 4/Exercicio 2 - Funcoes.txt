@@ -21,9 +21,5 @@ COMPORTAMENTO:
 
 ATENÇÃO! Os campos de preenchimento só aceitarão número!!
 
-4) Ao clicar no botão Calcular, criar uma funcao que retornará a média das tuas notas.
-    Obs: Nota Grau A tem 
-5) Ao clicar no botão Voltar, redirecionar usuário para a página Dashboard.
-
 ENTREGA:
 Commitar todos os arquivos no Git.
