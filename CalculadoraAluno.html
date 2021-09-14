@@ -28,13 +28,27 @@
         <button type="button" onclick="Voltar()" class="voltar">Voltar</button>
     </div>
     <div>
-        <button type="button" onclick="alert(Math.PI)" class="PI">Calcule o PI  </button>
+        <button type="button" onclick="AlertaPI()" class="PI">Calcule o PI  </button>
     </div>
     <div> 
-        <button type="button" onclick="alert(Math.random() * 10)" class="Randon">Numero Aleatorio   </button>
+        <button type="button" onclick="AlertaNumero()" class="Randon">Numero Aleatorio   </button>
+    </div>
+    <div> 
+        <button type="button" onclick="VerificaSeNumeroAleatorioEhMaiorQue5()">Verifica Numero Aleatorio </button>
     </div>
 </body>
 <script>
+
+
+
+function AlertaPI(){
+    var pi = BuscaPI();
+    alert(pi);
+}
+
+function BuscaPI(){
+    return Math.PI;
+}
 
 function Calcular()
 {
@@ -75,11 +89,26 @@ function Calcular()
     window.location.href = "dashboard.html"
   }
  
- function Maior() 
+
+  function AlertaNumero(){
+      var retornoNumero = BuscaNumeroAleatorio();
+      alert(retornoNumero);
+  }
+
+  function BuscaNumeroAleatorio(){
+      return Math.random() * 10;
+  }
+  
+   function VerificaSeNumeroAleatorioEhMaiorQue5() 
   {
-     
-   var janelaaleatrorio = window.getElementById("Randon")
-   return janelaaleatrorio.value
+     alert("fazer o resto");
+    //buscar o numero aleatório
+
+    //verificar se é maior que 5
+
+    // se for(if), alert "maior"
+
+    // se não for, alert menor.
 
   }
 
