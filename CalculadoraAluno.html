@@ -21,9 +21,17 @@
         <input type="number" name="notaC" id="NotaC">
     </div>
     <div>
-<button type="button" onclick="Calcular()" class="calcular" >Calcular</button>
+<button type="button" onclick="Calcular()" class="calcular" >Calcular
+</button>
     </div>
-    <div><button type="button" onclick="Voltar()" class="voltar">Voltar</button>
+    <div>
+        <button type="button" onclick="Voltar()" class="voltar">Voltar</button>
+    </div>
+    <div>
+        <button type="button" onclick="alert(Math.PI)" class="PI">Calcule o PI  </button>
+    </div>
+    <div> 
+        <button type="button" onclick="alert(Math.random() * 10)" class="Randon">Numero Aleatorio   </button>
     </div>
 </body>
 <script>
@@ -44,16 +52,16 @@ function Calcular()
    }
 }   
     function notaa()
-{
+   {
        var notagraua = document.getElementById("NotaA");
       return notagraua.value;
-}
+   }
     
   function notab()
   {
        var campob = document.getElementById("NotaB")
        return  campob.value;
- }
+  }
   
   function notac()
   {
@@ -62,7 +70,22 @@ function Calcular()
 
   }
 
-  function Voltar(){
-    window.location.href = "dashboard.html"}
+  function Voltar()
+  {
+    window.location.href = "dashboard.html"
+  }
+ 
+ function Maior() 
+  {
+     
+   var janelaaleatrorio = window.getElementById("Randon")
+   return janelaaleatrorio.value
+
+  }
+
+
+
+
+
 </script>
 </html>
