@@ -47,8 +47,26 @@
     <div>
         <button type="button" onclick="mesatual()" class="Mesatual">Mês Atual </button>
     </div>
+    <div>
+        <button type="button" onclick="verifica()" class="par">Verificar Par  </button>
+    </div>
 </body>
 <script>
+    var num = input.value;
+
+    for (var i = 1; i <= num; i++) {
+        var sqRoot = Math.sqrt(i);
+        if (Math.floor(sqRoot) !== sqRoot) {
+            continue;
+        }
+
+        para.textContent += i + ' ';
+    }
+
+    function verifica() {
+        alert("Numeros pares 0, 2, 4, 6, e 8... ")
+    }
+
     function buscarmes() {
         var data = new Date();
         var mes = String(data.getMonth() + 1).padStart(2, '0');
