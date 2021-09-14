@@ -1,0 +1,26 @@
+REQUISITO: 
+Eventos
+    https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Building_blocks/Events
+
+ESTRUTURA,
+
+•	Alteração na  página Calculadora do Aluno
+
+HISTÓRIA DE USUÁRIO
+
+•	Como estudante do curso “Curso de TI”
+•	Quero poder calcular minha média no semestre
+•	Para que eu possa verificar se passei no semestre. Porém não possso digitar números maiores que 10.
+
+
+COMPORTAMENTO:
+
+1) Adicionar o evento "onchange" nos três campos das notas do semestre (procurar como fazer o evento "onchange" no js)
+2) Ao digitar alguma coisa, deverá validar se o campo é maior que 10.
+3) Se for, deve emitir um alerta para o usuário "O máximo da nota é 10"
+4) Limpar o campo digitado (procurar como faz isso em JS)
+
+
+ENTREGA:
+Commitar todos os arquivos no Git.
+ESTRUTURA,
