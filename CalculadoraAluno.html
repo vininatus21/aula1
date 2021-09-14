@@ -39,96 +39,69 @@
     </div>
     <div>
         <button type="button" onclick="VerificaSeNumeroAleatorioEhMaiorQue5()">Verifica Numero
-                Aleatorio </button>
+ Aleatorio </button>
+    </div>
+    <div>
+        <button type="button" onclick="dataatual()" class="Dataatual">Data Atual </button>
+    </div>
+    <div>
+        <button type="button" onclick="mesatual()" class="Mesatual">Mês Atual </button>
     </div>
 </body>
 <script>
- 
-function AlertaPI(){
-    var pi = BuscaPI();
-    alert(pi);
-}
+    function buscarmes() {
+        var data = new Date();
+        var mes = String(data.getMonth() + 1).padStart(2, '0');
+        MesAtual = mes
 
-function BuscaPI(){
-    return Math.PI;
-}
-
-function Calcular()
-{
-   var notagraua = notaa();
-   var notagraub = notab();
-   var notagrauc = notac();
-   var media = (parseInt(notagraua) + parseInt(notagraub) + parseInt(notagrauc))/3;
-   if (media > 6) 
-   {
-        alert("Passou:" + media)
-   } 
-   else 
-   {
-        alert("Reprovou")
-   }
-}   
-    function notaa()
-   {
-       var notagraua = document.getElementById("NotaA");
-      return notagraua.value;
-   }
-    
-  function notab()
-  {
-       var campob = document.getElementById("NotaB")
-       return  campob.value;
-  }
-  
-  function notac()
-  {
-      var campoc = document.getElementById("NotaC")
-      return campoc.value;
-
-  }
-
-  function Voltar()
-  {
-    window.location.href = "dashboard.html"
-  }
- 
-
-  function AlertaNumero(){
-      var retornoNumero = BuscaNumeroAleatorio();
-      alert(retornoNumero);
-  }
-
-  function BuscaNumeroAleatorio(){
-      return Math.random() * 10;
-  }
-  
-   function VerificaSeNumeroAleatorioEhMaiorQue5() 
-  {
-     var verificacaomaiorque5 = BuscaNumeroAleatorio();
-    
-     if  (verificacaomaiorque5 >= 5)
-    {
-         alert("Maior do que 5:" + verificacaomaiorque5 )
-    }
-    else
-    {
-         alert("Menor do que 5:" + verificacaomaiorque5)
     }
 
+    function mesatual() {
+        var mess = buscarmes();
+        alert(MesAtual);
+    }
 
+    function buscardata() {
+        var data = new Date();
+        var dia = String(data.getDate()).padStart(2, '0');
+        dataAtual = dia
+    }
 
+    function dataatual() {
+        var data = buscardata();
+        alert(dataAtual);
+    }
 
+    function AlertaPI() {
+        var pi = BuscaPI();
+        alert(pi);
+    }
 
+    function BuscaPI() {
+        return Math.PI;
+    }
 
-    //buscar o numero aleatório
+    function Calcular() {
+        var notagraua = notaa();
+        var notagraub = notab();
+        var notagrauc = notac();
+        var media = (parseInt(notagraua) + parseInt(notagraub) + parseInt(notagrauc)) / 3;
+        if (media > 6) {
+            alert("Passou:" + media)
+        } else {
+            alert("Reprovou")
+        }
+    }
 
-    //verificar se é maior que 5
+    function notaa() {
+        var notagraua = document.getElementById("NotaA");
+        return notagraua.value;
+    }
 
-    // se for(if), alert "maior"
-
-    // se não for, alert menor.
-
-  }
+    function notab() {
+        var campob = document.getElementById("NotaB")
+        return campob.value;
+    }
 
     function notac() {
         var campoc = document.getElementById("NotaC")
@@ -144,7 +117,6 @@ function Calcular()
     function AlertaNumero() {
         var retornoNumero = BuscaNumeroAleatorio();
         alert(retornoNumero);
-        var a = "!";
     }
 
     function BuscaNumeroAleatorio() {
@@ -152,14 +124,13 @@ function Calcular()
     }
 
     function VerificaSeNumeroAleatorioEhMaiorQue5() {
-        alert("fazer o resto");
-        //buscar o numero aleatório
+        var verificacaomaiorque5 = BuscaNumeroAleatorio();
 
-        //verificar se é maior que 5
-
-        // se for(if), alert "maior"
-
-        // se não for, alert menor.
+        if (verificacaomaiorque5 >= 5) {
+            alert("Maior do que 5:" + verificacaomaiorque5)
+        } else {
+            alert("Menor do que 5:" + verificacaomaiorque5)
+        }
 
     }
 </script>
