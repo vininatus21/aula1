@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule suas notas </title>
+</head>
+
+<body>
+    <h1>Calcule suas notas aqui </h1>
+    <div>
+        <label>Nota Grau A:</label>
+        <input type="number" name="notaA" id="NotaA">
+    </div>
+    <div>
+        <label>Nota Grau B:</label>
+        <input type="number" name="notaB" id="NotaB">
+    </div>
+    <div>
+        <label>Nota Grau C:</label>
+        <input type="number" name="notaC" id="NotaC">
+    </div>
+    <div>
+        <button type="button" onclick="Calcular()" class="calcular">Calcular
+            </button>
+    </div>
+    <div>
+        <button type="button" onclick="Voltar()" class="voltar">Voltar</button>
+    </div>
+    <div>
+        <button type="button" onclick="AlertaPI()" class="PI">Calcule o PI
+            </button>
+    </div>
+    <div>
+        <button type="button" onclick="AlertaNumero()" class="Randon">Numero
+                Aleatorio </button>
+    </div>
+    <div>
+        <button type="button" onclick="VerificaSeNumeroAleatorioEhMaiorQue5()">Verifica Numero
+ Aleatorio </button>
+    </div>
+    <div>
+        <button type="button" onclick="dataatual()" class="Dataatual">Data Atual </button>
+    </div>
+    <div>
+        <button type="button" onclick="mesatual()" class="Mesatual">Mês Atual </button>
+    </div>
+    <div>
+        <button type="button" onclick="verifica()" class="par">Verificar Par  </button>
+    </div>
+</body>
+<span id="span"></span>
+<script>
+    function verifica() {
+        for (var numero = 1; numero <= 10; numero++) {
+            if (numero % 2 == 0) {
+                alert(numero);
+            }
+        }
+    }
+
+    function buscarmes() {
+        var data = new Date();
+        var mes = String(data.getMonth() + 1).padStart(2, '0');
+        MesAtual = mes
+    }
+
+    function mesatual() {
+        var mess = buscarmes();
+        alert(MesAtual);
+    }
+
+    function buscardata() {
+        var data = new Date();
+        var dia = String(data.getDate()).padStart(2, '0');
+        dataAtual = dia
+    }
+
+    function dataatual() {
+        var data = buscardata();
+        alert(dataAtual);
+    }
+
+    function AlertaPI() {
+        var pi = BuscaPI();
+        alert(pi);
+    }
+
+    function BuscaPI() {
+        return Math.PI;
+    }
+
+    function Calcular() {
+        var notagraua = notaa();
+        var notagraub = notab();
+        var notagrauc = notac();
+        var media = (parseInt(notagraua) + parseInt(notagraub) + parseInt(notagrauc)) / 3;
+        if (media > 6) {
+            alert("Passou:" + media)
+        } else {
+            alert("Reprovou")
+        }
+    }
+
+    function notaa() {
+        var notagraua = document.getElementById("NotaA");
+        return notagraua.value;
+    }
+
+    function notab() {
+        var campob = document.getElementById("NotaB")
+        return campob.value;
+    }
+
+    function notac() {
+        var campoc = document.getElementById("NotaC")
+        return campoc.value;
+
+    }
+
+    function Voltar() {
+        window.location.href = "dashboard.html"
+    }
+
+
+    function AlertaNumero() {
+        var retornoNumero = BuscaNumeroAleatorio();
+        alert(retornoNumero);
+    }
+
+    function BuscaNumeroAleatorio() {
+        return Math.random() * 10;
+    }
+
+    function VerificaSeNumeroAleatorioEhMaiorQue5() {
+        var verificacaomaiorque5 = BuscaNumeroAleatorio();
+
+        if (verificacaomaiorque5 >= 5) {
+            alert("Maior do que 5:" + verificacaomaiorque5)
+        } else {
+            alert("Menor do que 5:" + verificacaomaiorque5)
+        }
+
+    }
+</script>
+
+</html>
