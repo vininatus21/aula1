@@ -12,15 +12,15 @@
     <h1>Calcule suas notas aqui </h1>
     <div>
         <label>Nota Grau A:</label>
-        <input type="number" onclick="notaa()" name="notaA" id="NotaA">
+        <input type="number" name="notaA" id="NotaA" onchange="nota1() ">
     </div>
     <div>
         <label>Nota Grau B:</label>
-        <input type="number" onclick="notab()" name="notaB" id="NotaB">
+        <input type="number" name="notaB" id="NotaB" onchange="nota2()">
     </div>
     <div>
         <label>Nota Grau C:</label>
-        <input type="number" onclick="notac()" name="notaC" id="NotaC">
+        <input type="number" name="notaC" id="NotaC" onchange="nota3()">
     </div>
     <div>
         <button type="button" onclick="calcular()" class="calcular">Calcular
@@ -49,12 +49,24 @@
     <div>
         <button type="button" onclick="verificapar()" class="par">Verificar Par  </button>
     </div>
-
+    <div>
+        <button type="button" onclick="divisao()" class="divide">Dividi Numeros  </button>
+    </div>
+    <div>
+        <button type="button" onclick="multiplicacao()" class="divide">Multiplica Numeros  </button>
+    </div>
+    <div>
+        <button type="button" onclick="adicao()" class="divide">Adiciona Numeros  </button>
+    </div>
+    <div>
+        <button type="button" onclick="subtracao()" class="divide">Subtrai Numeros  </button>
+    </div>
 </body>
 <script>
     function notaa() {
         var notagraua = document.getElementById("NotaA")
         return notagraua.value;
+
     }
 
     function notab() {
@@ -116,32 +128,112 @@
     function buscardataatual() {
         var data = new Date();
         var dia = String(data.getDate()).padStart(2, '0');
-        dataAtual = dia
+        return dia;
     }
 
     function dataatual() {
         var data = buscardataatual();
-        alert(dataAtual);
+        alert(data);
     }
 
     function buscarmesatual() {
         var data = new Date();
         var mes = String(data.getMonth() + 1).padStart(2, '0');
-        MesAtual = mes
+        return mes;
 
     }
 
     function mesatual() {
         var mes = buscarmesatual();
-        alert(MesAtual)
+        alert(mes)
     }
 
     function verificapar() {
-        for (var i = 0; i < 10; i++);
-        if (i % 2 == 0) {
-            alert("Par")
+        for (var i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                alert("Par")
+            } else {
+                alert("Inpar")
+            }
+        }
+
+    }
+
+
+    function retornadivisao(numero1, numero2, ) {
+        return numero1 / numero2;
+    }
+
+    function divisao() {
+        var divisaoa = notaa();
+        var divisaob = notab();
+        var resultado = retornadivisao(divisaoa, divisaob);
+        alert(resultado)
+    }
+
+    function retornamultiplicacao(numero1, numero2, numero3) {
+        return numero1 * numero2 * numero3;
+    }
+
+    function multiplicacao() {
+        var multiplicacaoa = notaa();
+        var multiplicacaob = notab();
+        var multiplicacaoc = notac();
+        var resultadomult = retornamultiplicacao(multiplicacaoa, multiplicacaob, multiplicacaoc)
+        alert(resultadomult)
+    }
+
+    function retornaadicao(numero1, numero2, numero3) {
+        return numero1 + numero2 + numero3;
+    }
+
+    function adicao() {
+        var adicaoa = notaa();
+        var adicaob = notab();
+        var adicaoc = notac();
+        var resultadoadi = retornaadicao(parseInt(adicaob), parseInt(adicaob), parseInt(adicaoc))
+        alert(resultadoadi)
+    }
+
+    function retornamulsubtracao(numero1, numero2, numero3) {
+        return numero1 - numero2 - numero3;
+    }
+
+    function subtracao() {
+        var subtraia = notaa();
+        var subtraib = notab();
+        var subtraic = notac();
+        var resultadosub = retornamulsubtracao(subtraia, subtraib, subtraic)
+        alert(resultadosub)
+    }
+
+    function nota1() {
+        var calcularcampoa = notaa();
+        var calcular = (parseInt(calcularcampoa))
+        if (calcular <= 10) {
+
         } else {
-            alert("Inpar")
+            alert("O máximo da nota é 10 no campo A")
+        }
+    }
+
+    function nota2() {
+        var calcularcampob = notab();
+        var calcularb = (parseInt(calcularcampob))
+        if (calcularb <= 10) {
+
+        } else {
+            alert("O máximo da nota é 10 no campo B")
+        }
+    }
+
+    function nota3() {
+        var calcularcampoc = notac();
+        var calcularc = (parseInt(calcularcampoc))
+        if (calcularc <= 10) {
+
+        } else {
+            alert("O máximo da nota é 10 no campo C")
         }
     }
 </script>
