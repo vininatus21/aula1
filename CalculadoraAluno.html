@@ -8,19 +8,19 @@
     <title>Calcule suas notas </title>
 </head>
 
-<body>
+<body onload="checandoCookies()">
     <h1>Calcule suas notas aqui </h1>
     <div>
         <label>Nota Grau A:</label>
-        <input type="number" name="notaA" id="NotaA" onchange="nota1() ">
+        <input type="number" name="notaA" id="NotaA" onchange="nota1()" onfocus="this.value=''">
     </div>
     <div>
         <label>Nota Grau B:</label>
-        <input type="number" name="notaB" id="NotaB" onchange="nota2()">
+        <input type="number" name="notaB" id="NotaB" onchange="nota2()" onfocus="this.value=''">
     </div>
     <div>
         <label>Nota Grau C:</label>
-        <input type="number" name="notaC" id="NotaC" onchange="nota3()">
+        <input type="number" name="notaC" id="NotaC" onchange="nota3()" onfocus="this.value=''">
     </div>
     <div>
         <button type="button" onclick="calcular()" class="calcular">Calcular
@@ -84,7 +84,7 @@
         var notagraub = notab();
         var notagrauc = notac();
         var media = (parseInt(notagraua) + parseInt(notagraub) + parseInt(notagrauc)) / 3;
-        if (media > 6) {
+        if (media >= 6) {
             alert("Passou:" + media)
         } else {
             alert("reprovou:" + media)
@@ -234,6 +234,14 @@
 
         } else {
             alert("O máximo da nota é 10 no campo C")
+        }
+    }
+
+    function checandoCookies() {
+        if (navigator.cookieEnabled == true) {
+            alert("Cookies são permitidos")
+        } else {
+            alert("Cookies não são permitidos")
         }
     }
 </script>
