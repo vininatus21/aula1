@@ -39,12 +39,36 @@
 
 </body>
 <script>
+    function calcularad() {
+        var valorcampo1 = document.getElementById('NotaA').value
+        var valorcampo2 = document.getElementById('NotaB').value
+        var calculadora1 = new Calculadora(parseInt(valorcampo1), parseInt(valorcampo2))
+        var receberresultado = calculadora1.Somar()
+        alert(receberresultado)
+    }
+
+    function calcularsub() {
+        var valorcampo1 = document.getElementById('NotaA').value
+        var valorcampo2 = document.getElementById('NotaB').value
+        var calculadora2 = new Calculadora(valorcampo1, valorcampo2)
+        var receberresultadosub = calculadora2.Subtrair()
+        alert(receberresultadosub)
+    }
+
+    function calcularmult() {
+        var valorcampo1 = document.getElementById('NotaA').value
+        var valorcampo2 = document.getElementById('NotaB').value
+        var calculadora3 = new Calculadora(parseInt(valorcampo1), parseInt(valorcampo2))
+        var receberresultadomult = calculadora3.Multiplicar()
+        alert(receberresultadomult)
+    }
+
     function calculardiv() {
         var valorcampo1 = document.getElementById('NotaA').value
         var valorcampo2 = document.getElementById('NotaB').value
-        var calculadora1 = new Calculadora(valorcampo1, valorcampo2)
-        var receberresultado = calculadora1.Dividir()
-        alert(receberresultado)
+        var calculadora4 = new Calculadora(valorcampo1, valorcampo2)
+        var receberresultadodiv = calculadora4.Dividir()
+        alert(receberresultadodiv)
     }
 </script>
 
