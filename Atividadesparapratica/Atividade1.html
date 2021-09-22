@@ -9,15 +9,19 @@
 </head>
 
 <body>
-    <h1>Trabalhando com dados v1.0</h1>
+    <h1>Trabalhando com dados </h1>
     <div>
         <button type="button" onclick="AlertaBemvindo()" class="Alerta">Clique para começar</button>
     </div>
+    <section id="resultadosoprompt">
+        <p>Aqui vai aparecer o resultado... </p>
+    </section>
 </body>
 <script>
     function AlertaBemvindo() {
         var nome = window.prompt("Olá qual é seu nome?");
-        alert("Olá," + " " + nome + "!" + " " + "É um prazer te conhecer!")
+        let res = window.document.getElementById('resultadosoprompt')
+        res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhecer! &#x1F596;`
     }
 </script>
 
