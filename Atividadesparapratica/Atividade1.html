@@ -13,11 +13,12 @@
     <div>
         <button type="button" onclick="AlertaBemvindo()" class="Alerta">Clique para começar</button>
     </div>
+    <span id="spamalerta"> Aqui vai aparecer o resultado... </span>
 </body>
 <script>
     function AlertaBemvindo() {
         var nome = window.prompt("Olá qual é seu nome?");
-        document.write(nome);
+        document.getElementById("spamalerta").innerHTML = "Olá," + nome + "! É um grande prazer te conhecer!";
     }
 </script>
 
