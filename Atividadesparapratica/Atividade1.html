@@ -13,12 +13,28 @@
     <div>
         <button type="button" onclick="AlertaBemvindo()" class="Alerta">Clique para começar</button>
     </div>
-    <span id="spamalerta"> Aqui vai aparecer o resultado... </span>
+    <span id="spamalerta"> O resultado vai aparecer aqui... </span>
+    <span id="valorabsoluto">  </span>
+    <span id="parteinteira">  </span>
+    <span id="inteiromaispróximo">  </span>
+    <span id="raizquadrada">  </span>
+    <span id="raizcubica"> </span>
+    <span id="elevadoa2">  </span>
+    <span id="elevadoa3">  </span>
+
 </body>
 <script>
     function AlertaBemvindo() {
-        var nome = window.prompt("Olá qual é seu nome?");
-        document.getElementById("spamalerta").innerHTML = "Olá," + nome + "! É um grande prazer te conhecer!";
+        var numero = window.prompt("Digite um Número");
+        document.getElementById("spamalerta").innerHTML = "O número a ser analisado aqui será o " + numero;
+        document.getElementById("valorabsoluto").innerHTML = `<p>O seu valor absoluto é ${Math.abs(numero)}</p>`
+        document.getElementById("parteinteira").innerHTML = `<p>A sua parte inteira é ${Math.trunc(numero)}</p>`
+        document.getElementById("inteiromaispróximo").innerHTML = `<p>O valor inteiro mais próximo é ${Math.round(numero)}</p>`
+        document.getElementById("raizquadrada").innerHTML = `<p>A sua raiz quadrada é ${Math.sqrt(numero)}</p>`
+        document.getElementById("raizcubica").innerHTML = `<p>A sua raiz cúbica é ${Math.cbrt(numero)}</p>`
+        document.getElementById("elevadoa2").innerHTML = `<p>O valor de ${numero}<sup>2</sup> é ${Math.pow(numero, 2)}</p>`
+        document.getElementById("elevadoa3").innerHTML = `<p>O valor de ${numero}<sup>3</sup> é ${Math.pow(numero, 3)}</p>`
+
     }
 </script>
 
