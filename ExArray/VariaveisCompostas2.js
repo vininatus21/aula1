@@ -1,9 +1,11 @@
-var nomes = ["Vinícius", "Flávia"]
-nomes.push("Vitor", "Rafaela")
-nomes.push("Rodrigo", "Stefani")
-console.log(nomes)
-nomes.sort()
-for (var pos = 0; pos < nomes.length; pos++) {
-    console.log(nomes[pos])
+function clicar() {
+    var nomes = ["Vinícius", "Flávia", "Rodrigo", "Stefani", "Vitor", "Rafaela"]
+    var nomes2 = ["Zeca", "Marcia", "Vó", "Stela", "Tania", "Vinícius"]
+    for (var pos = 0; pos < nomes.length; pos++) {
+        for (var j = 0; j < nomes2.length; j++) {
+            if (nomes[pos] == nomes2[j]) {
+
+            }
+        }
+    }
 }
-console.log(`O ${nomes[2]} está casado com a ${nomes[3]}`)
