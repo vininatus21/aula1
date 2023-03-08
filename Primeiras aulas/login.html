@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de TI login</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, cyan, LawnGreen)
+        }
+        
+        .teladelogin {
+            background-color: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 80px;
+            color: rgb(255, 255, 255);
+            border-radius: 15px;
+        }
+        
+        input {
+            padding: 15px;
+            outline: none;
+        }
+        
+        button {
+            background-color: rgb(28, 41, 156);
+            border: none;
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+        }
+        
+        button:hover {
+            background-color: deepskyblue;
+            cursor: pointer;
+        }
+        
+        .bemvindo {
+            position: absolute;
+            left: 300px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .esqueciminhasenha {
+            color: white;
+        }
+        
+        .cadastroaluno {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="bemvindo"> Olá, acesse o curso, digitando o usuário e senha abaixo
+    </h1>
+    <div class="teladelogin">
+        <h1>Login</h1>
+        <input type="text" id="emailformulario" placeholder="Email" onkeypress="mudarcoremail()">
+        <br><br>
+        <input type="password" id="senhapas" placeholder="Senha" onkeypress="mudarcorsenha()">
+        <br><br>
+        <button type="button" onclick="Redirecionar()">Enviar</button>
+        <a href="#" class="esqueciminhasenha" onclick="Senha()">Esqueci minha Senha</a>
+        <br>
+        <a href="#" class="cadastroaluno" onclick="Cadastro()">Cadastrar Aluno</a>
+    </div>
+</body>
+<script>
+    function mudarcoremail() {
+        document.getElementById("emailformulario").style.backgroundColor = 'cyan';
+    }
+
+    function mudarcorsenha() {
+        document.getElementById("senhapas").style.backgroundColor = 'LawnGreen';
+    }
+
+    function SenhaEstaPreenchida() {
+        var campopassword = document.getElementById("senhapas");
+        if (campopassword.value) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function EmailEstaPreenchido() {
+        //Fazer de fato a validação!
+        var campoemail = document.getElementById("emailformulario");
+        if (campoemail.value) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function Redirecionar() {
+        //agora tá debugando.
+
+        var retornoemail = EmailEstaPreenchido();
+        var retornosenha = SenhaEstaPreenchida();
+        if (retornoemail == true && retornosenha == true) {
+            window.location.href = "dashboard.html";
+        } else {
+            alert("Email e senha devem ser preenchidos");
+        }
+    }
+
+    function Senha() {
+        window.location.href = "EsqueciMinhaSenha.html"
+    }
+
+    function Cadastro() {
+        window.location.href = "CadastrarAluno.html"
+
+    }
+</script>
+
+</html>

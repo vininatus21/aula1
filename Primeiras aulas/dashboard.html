@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de TI</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        .botao {
+            background-color: rgb(28, 41, 156);
+            border: none;
+            width: 10%;
+            padding: 10px;
+            border-radius: 10px;
+            color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo" onmouseout="Mousesaititulo()" onmouseover="mousetitulo()">Bem-Vindo ao curso do Rodrigo!!!</h1>
+    <p>Aqui você ira aprender a como formatar sites em estilos html, css e js</p>
+    <button type="button" onclick="Redirecionarlogin()" class="botao">Voltar</button>
+    <div><a href="#" id="Calcularanota" class="Calcularanota" onmouseout="Mousesaicalcu()" onmouseover="mousecalculadora()" onclick="calculadora()">Calcule sua nota</a>
+
+    </div>
+    <script>
+        window.alert(`Seja bem-vindo ao curso de TI`)
+
+
+        function Redirecionarlogin() {
+
+            window.location.href = "login.html";
+        }
+
+        function calculadora() {
+            window.location.href = "CalculadoraAluno.html"
+        }
+
+        function mousetitulo() {
+            document.getElementById('titulo').style.color = 'red';
+        }
+
+        function Mousesaititulo() {
+            document.getElementById('titulo').style.color = 'black';
+        }
+
+        function mousecalculadora() {
+            document.getElementById('Calcularanota').style.color = 'red';
+        }
+
+        function Mousesaicalcu() {
+            document.getElementById('Calcularanota').style.color = 'DarkBlue';
+        }
+    </script>
+</body>
+
+</html>
